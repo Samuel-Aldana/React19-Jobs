@@ -1,5 +1,5 @@
 
-const Hero = ({titulo= "Tung tung", subtitulo= "Sahur"}) => {
+const Hero = ({titulo="Conviertete en un desarrollador de React", subtitulo="Encuentra tu próximo empleo como desarrollador de React, que se adapte a tus habilidades y necesidades"}) => {
   return (
     <section className="bg-indigo-700 py-20 mb-4">
       <div
