@@ -2,9 +2,9 @@ import {useState} from 'react'
 import {FaMapMarkerAlt} from 'react-icons/fa'
 import { Link } from 'react-router' 
 
-const JobListing = ({ job }) => {
+const JobListing = ({ job, isDetail = false }) => {
 
-    const [showFullDescription, setFullDescription] = useState(false)
+    const [showFullDescription, setFullDescription] = useState(isDetail)
 
     let description = job.description
 
@@ -37,12 +37,12 @@ const JobListing = ({ job }) => {
                   <FaMapMarkerAlt className="inline-block mr-2" />
                   {job.location}
                 </div>
-                <Link
-                  to="job"
+                {!isDetail && <Link
+                  to={`/jobs/${job.id}`}
                   className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                 >
                  Read More
-                </Link>
+                </Link>}
               </div>
             </div>
           </div>
